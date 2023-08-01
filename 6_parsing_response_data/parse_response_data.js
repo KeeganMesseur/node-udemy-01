@@ -49,8 +49,8 @@ server.listen(3000);
 // Each chunk makes up a part of the request body.
 
 // BUFFERS
-//Buffers allow us to organize the request body. 
-//Essentially allowing us to hold multiple chunks and use them before they are destroyed.
+// Buffers allow us to organize the request body. 
+// Essentially allowing us to hold multiple chunks and use them before they are destroyed.
 
 
 // in the above code, line 18, we created a new const variable called 'body' this variable is defined as an empty array.
@@ -59,9 +59,9 @@ server.listen(3000);
 // we then use body.push, this assigned the chunk stream array value to the newly created body const variable 
 // body now looks like this: <Buffer 6d 65 73 73 61 67 65 3d 74 65 73 74>
 // we then have the end the lifecycle hook by calling req.on('end')
-//here we create a new const variable 'parsedBody' and give it the value of the buffer concatenated(with the value previously returned as stored in body)
+// here we create a new const variable 'parsedBody' and give it the value of the buffer concatenated(with the value previously returned as stored in body)
 // the toString method is then used to convert that string of chunks into a string. 
-//we then define of const message as the parsedBody, removing the '=' and getting the value in position 1.
+// we then define of const message as the parsedBody, removing the '=' and getting the value in position 1.
 // we then have to move the  fs.writeFileSync('message.txt',  message) into the event loop and define the content of the message.txt file to message.
 
 
